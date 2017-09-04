@@ -14,7 +14,7 @@ prompt("Текст[Вопрос], вариант ответа[может быт�
 prompt("How old are u?", 21);
 
 Использование:
-user = prompt("How old are u?", 21);
+var user = prompt("How old are u?", 21);
 alert("Тебе" +user+ "лет");
 
 Логика такая: я создаю переменную значение которой функция, после чего 
@@ -26,13 +26,13 @@ alert("Тебе" +user+ "лет");
 confirm("Are u ...?");
 
 Использование:
-varr = confirm("Are u ...?")
+var varr = confirm("Are u ...?")
 
 */
 
 alert("Messange");
 
-bla = prompt("How old are u?", 21);
+var bla = prompt("How old are u?", 21);
 alert("Тебе" +bla+ "лет");
 
 confirm("Are u ...?");

@@ -36,7 +36,74 @@
 		Условный (тернарный) оператор - "?". 
 		variable = (condition) ? value1: value2 
 		Например:
-		var isAdult = (age < 18) ? "Too young": "Old enough";
+			var isAdult = (age < 18) ? "Too young": "Old enough";
 
 	1.7 Строковые операторы
 		Конкатенация - соедниенеие множества строк по средствам "+".
+
+2. Условия и циклы
+	2.1 Оператор if
+		Блок кода будет выполнен, только есть условие будет верным.
+			if (condition){
+
+			}
+
+	2.2 Оператор if else
+		else указывает код блока, если условие false.
+			if (condition){
+
+				}
+			else{
+
+			}
+
+	2.3 Оператор switch
+		Используется в случаях, когда применяется множество условий и использование if else становится неудобным.
+			switch (expression) {
+				case n1: 
+					statements
+					break;
+				case n2: 
+					statements
+					break;
+				default: 
+					statements
+			}
+
+		Можно использовать любое количество case.
+		break - выход из блока.
+		default - определяет код для запуска, если нет соответствующего case.
+
+	2.4 Цикл for
+		for (var i = 0 /*начало*/; i < Things.length /*условие окончания*/; i++ /*шаг*/) {
+			Things[i]
+		}
+
+	2.5 Цикл while 
+		while выполняется до тех пор, пока условие не будет верным.
+			while (condition){
+				code
+			}
+
+	2.6 Цикл do while
+		Код выполняется до проверки правильности условия.
+			do{
+				code
+			}
+			while(condition);
+
+	2.7 break and continue 
+		Выражение break перерывает выполнение цикла и продолжает выполение кода дальше.
+			for (i=0; i <= 10; i++){
+				if(i == 5){
+					break;
+				}
+				console.log(i + "<br>")
+			}
+		continue останавливает только одну итерацию в цикле и переходит к следующей.
+			for (i=0; i <= 10; i++){
+				if(i == 5){
+					continue;
+				}
+				console.log(i + "<br>")
+			}

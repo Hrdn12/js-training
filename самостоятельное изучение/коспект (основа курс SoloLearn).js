@@ -107,3 +107,80 @@
 				}
 				console.log(i + "<br>")
 			}
+
+
+3. Функции
+	3.1 Функции определенные пользоваетелем
+		Функция - блок кода, созданный для выполнения специального задания.
+		Имена функций могут содержать буквы, цифры, нижние подчеркивания и знаки доллара.
+			function name(){
+				code
+			}
+
+		Вызов функции:
+			function myFunction(){
+				alert("blablabla");
+			}
+
+			myFunction();
+
+		Функцию можно вызывать сколько угодно раз:
+			function myFunction(){
+				alert("blablabla");
+			}
+
+			myFunction();
+
+			other code
+
+			myFunction();
+
+	3.2 Параметры функций
+		Параметры - имена размещенные в определении функции. Параметры разделяются запятой.
+			function name(param1, param2, param3){
+
+			}
+
+		Пример:
+		function yourName(name){
+			console.log("Hi, " + name);
+		}
+
+		yourName("Dima");
+
+	3.3 Использование множества параметров в функциях
+			function sayHello(name, age){
+				console.log(name + " is " + age + " years old");
+			}
+
+			sayHello("Dima", 21);
+
+	3.4 Оператор return
+		Возвращает значение функции и останавливает её выполнение.
+		Например:
+			function fun(a, b){
+				return a*b;
+			}
+
+			var x = fun(13, 11);
+
+	3.5 Alert, Prompt, Confirm
+		3.5.1 Alert
+			Окно предупреждения. При всплытии окна все действия на странице заблокированы до нажатия "OK".
+				alert("Хочу шоколадку");
+
+		3.5.2 Prompt
+			Окно для ввода значения пользователем. При нажатии "OK" возвращается введенное значение, а при нажании "cancel" - null.
+				var user = prompt("Как тебя зовут?");
+				alert("Привет, " + user);
+
+		3.5.3 Confirm
+			Окно подтверждения. При нажатии "OK" возвращается true, при нажатии "cancel" - false.
+			Например:
+				var result = confirm("Валим?");
+				if (result == true){
+					alert("Ну и вали");
+				}
+				else {
+					alert("Правильное решение");
+				}

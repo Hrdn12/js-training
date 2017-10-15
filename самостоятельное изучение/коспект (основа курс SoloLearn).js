@@ -264,3 +264,103 @@
 			function bornYear(){
 				return 2016 - this.age;
 			}
+
+
+5. Предопределенные объекты
+	5.1 Массивы
+		Массив - объект, который хранит множество значений (без свойств). Например:
+			var cource1 = "html";
+			var cource2 = "css";      =>     var cources = new Array("html", "css", "js");
+			var cource3 = "js";
+
+		Доступ к массиву получают о ссылке на номер индекса, записанный в квадратных скобках.
+			var cource = cources[0]; //получили значение "html"
+			cources[1] = "c++"; //заменили значение второго элемента (отсчёт с 0)
+
+	5.2 Другие способы созадания массивов
+		Можно, при объявлении массива, сказать сколько элементов он должен будет содержать. Сами же элементы добавить позже:
+			var cources = new Array(3);
+			cources[0] = "html";
+			cources[2] = "css";
+			cources[3] = "js";
+		Ecли же не указывать число элементов, то можно добавить столько элементов, сколько угодно.
+
+		Также можно задавать массив используя литреал массива:
+		var cources = ["html", "css", "js"];
+
+	5.3 Свойства массовов и методы
+		Свойство length позвращает число элементов массива:
+			var cources = ["html", "css", "js"];
+			console.log(cources.length);
+		Если массив пустой, то возвращается 0, во всех других случаяъ свойство на 1 больше максимального индекса.
+
+		Комбинирование массивов при помощи метода concat(). При его помощи можно соединять массивы.
+			var c1 = ["html", "css"];
+			var c2 = ["js", "c++"];
+			var cources = c1.concat(c2);
+			for (var i = 0; i < cources.length; i++) {
+				console.log(cources[i]); //вывод всех значений циклом
+			}
+
+	5.4 Ассоциативные массивы
+		var person = []; //empty array
+		person["name"] = "John";
+		person["age"] = 46;
+		document.write(person["age"]);
+		//Outputs "46"
+
+		Лучше использовать объекты.
+
+	5.5 Объект Math
+		Выволнение математических действий. https://api.sololearn.com/DownloadFile?id=2767
+			console.log(Math.PI);
+
+		Методы объекта Math: https://api.sololearn.com/DownloadFile?id=2769
+
+			var n = prompt("Узнать корень числа");
+			var m = Math.sqrt(n);
+			alert("Кореть числа " + n + " равен " + m);
+
+	5.6 Объект Date
+		setInterval() вызывает функцию, которая вычисляет выражение в указанных интервалах (миллисекундах).
+		Функция будет выполняться до вызова clearInterval() или закрытия окна.
+			function myAlert(){
+				console.log("Yo");
+			}
+			setInterval(myAlert, 3000);
+
+		Первым параметром может быть только функция.
+
+		setTimeout() spsdftn функцию через оперделенное время.
+			var timerId = setTimeout(func / code, delay[, arg1, arg2...])
+		Параметры:
+		- func/code - Функция или строка кода для исполнения. Строка поддерживается для совместимости, использовать её не рекомендуется.
+		- delay - Задержка в миллисекундах, 1000 миллисекунд равны 1 секунде.
+		- arg1, arg2… - Аргументы, которые нужно передать функции.
+
+		Date позволяет работать с датами. Можно создать объект содержащий текущую дату используя new:
+			var d = new Date();
+			console.log(d);
+
+		Можно создать объкты с указанной датой:
+			var d = new Date(year, mounth, hours, minutes, seconds, milliseconds);
+
+		Методы объекта: https://api.sololearn.com/DownloadFile?id=2772
+			var d = new Date();
+			var hours = d.getHours();
+
+			----------
+
+			function myTime(){
+				var t = new Date();
+				var h = t.getHours();
+				var m = t.getMinutes();
+				var s = t.getSeconds();
+				if (h > 19){
+					console.log("Сейчас " + h + " часа " + m  + " минут " + s + " секунд");
+				}
+				else{
+					console.log("Сейчас " + h + " часов " + m  + " минут " + s + " секунд");
+				}
+			}
+			setInterval(myTime, 1000);

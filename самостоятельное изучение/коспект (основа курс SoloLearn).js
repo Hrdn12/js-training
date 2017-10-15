@@ -184,3 +184,83 @@
 				else {
 					alert("Правильное решение");
 				}
+
+
+4. Объекты
+	4.1 Введение в объекты
+		Объект - переменная, которая может хранить много значений. Значения записываются как пара (свойство: значение), например:
+			var person = {
+				name: "name", age: 31,
+				favColor: "black", height: 182
+			};
+
+		Доступ к свойствам можно получить двумя способами:
+			objectName.propertyName
+			или
+			objectName['propertyName']
+			Пример:
+			var x = person.age;
+			var x = person['age'];
+
+		Встроенное свойство языка JavaScript Length используется для подсчёта числа символов в свойстве или в строке.
+			console.log(person.name.length);
+			//4
+
+		Метод объекта - свойство содержащее определение функции.
+			objectName.methodName();
+		Например:
+			В document.write() функция write() является методом объекта document.
+
+	4.2 Создание объектов
+		Функция конструктора объекта (принимает параметры и присваивает их свойствам объекта:
+			function person(name, age, color){
+				this.name = name;
+				this.age = age;
+				this.favColor = color;
+			}
+
+		Ключевое слово this ссылается на текущий объект.
+
+		Для создания объектов одинакогового типа используется ключевое слово new (имея функцию конструктора мы обращается к ней и она создает
+		новый объект по шаблону):
+
+			var p1 = new person("John", 42, "green");
+			var p2 = new person("Ann", 23, "blue");
+
+	4.3 Инициалиизация объекта.
+		Одиночные объекты можно создавать так:
+			var John = {name: "John", age: 25};
+
+		Синтаксис доступа к свойствам и методам не меняется.
+			console.log(John.name);
+
+	4.4 Добавление методов
+			methodName: function(){
+				code
+			}
+
+			objectName.methodName
+
+		Ключевое слово this используется в качестве ссылки на текущий объект, что значит, что с его помощью
+		вы можете получить доступ к свойствам и методам объекта. Например:
+			function person(name, age){
+				this.name = name;
+				this.age = age;
+				this.changeName = function(name){
+					this.name = name;
+				}
+			}
+
+			var p = new person ("David", 21);
+			p.changeName("Alex");
+			console.log(p.name);
+
+		Можно оперделить функцию все функции-конструктора и связать её с объектом:
+			function person(name,age){
+				this.name = name;
+				this.age = age;
+				this.yearOfBirth = bornYear;
+			}
+			function bornYear(){
+				return 2016 - this.age;
+			}

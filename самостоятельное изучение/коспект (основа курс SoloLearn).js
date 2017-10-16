@@ -364,3 +364,56 @@
 				}
 			}
 			setInterval(myTime, 1000);
+
+
+6. DOM и события
+	6.1 Что такое DOM?
+		Documet Object Model - представляет документ в виде структуры древа, где все элементы html становятся взаимосвязанными элементами.
+		Могут быть родительские, дочерние (потомки) и соседние (siblings) узлы. 
+		Главный родительский эоемент - объект document (через него можно получить доступ ко всем элементам [root]).
+		Потому для доступа к элементу:
+			document.body.innerHTML="some text";
+
+		.innerHTML используется для изменения содержания элемента.
+
+	6.2 Выборка элементов.
+		Выбор по id:
+			document.getElemetById(id);
+
+		Например (id="demo"):
+			var elem = document.getElemetById("demo");
+			elem.innerHTML("hi");
+
+		Выбор по классу:
+			document.getElemetsByClassName(name);
+
+		Возвращает элементы в виде массива.
+
+		Выбор по тегу:
+			doсument.getElementsByTagName(name);
+
+		Возвращает элементы в виде массива. Например:
+			//<p>hi</p>
+			//<p>hello</p>
+			//<p>hi</p>
+			var arr = document.getElementsByTagName("p");
+			for (var x = 0; x < arr.length; x++) {
+			  arr[x].innerHTML = "Hi there";
+			}
+
+		element.childNodes - возвращает дочерние узлы элемента.
+		element.firstChild - возвращает первый дочерний узел элемента.
+		element.lastChild - возвращает последний дочерний узел элемента.
+		element.hasChildNodes - возвращает true? если у элемента есть дочерний узел, иначе - false.
+		element.nextSibling - возвращает следюущий узел на том же уровне дерева.
+		element.previousSibling - возвращает предыдущий узел на одном уровне дерева.
+		element.parentNode - возвращает родительский узел элемента.
+
+		Пример использования:
+			   var a = document.getElementById("demo");
+			   var arr = a.childNodes;
+			   for(var x=0;x<arr.length;x++) {
+			   	arr[x].innerHTML = "new text";
+			     }
+
+

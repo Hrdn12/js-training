@@ -416,4 +416,24 @@
 			   	arr[x].innerHTML = "new text";
 			     }
 
+	6.3 Изменение элементов	
+		Практически все атрибуты элементов можно изменить:
+			var el = document.getElementById("id");
+			el.src = "apple.jpg";
+
+		То же самое и со свойствами:
+			var x = document.getElementById("id");
+			x.style.color = "black";
+
+		Нельзя использовать дефисы, заменяется при помощи camelCase (background-color -> backgroundColor).
+
+			var padd = document.querySelectorAll("#headimg-data > h1 > a");
+			var padd1 = document.querySelectorAll("#headimg-data > h1");
+			console.log(padd);
+			console.log(padd1);
+			padd.style.paddingTop = "20px";
+			padd1.style.paddingTop = "20px";
+
+			//*[@id="headimg-data"]/h1
+			#headimg-data > h1
 

@@ -427,13 +427,41 @@
 
 		Нельзя использовать дефисы, заменяется при помощи camelCase (background-color -> backgroundColor).
 
-			var padd = document.querySelectorAll("#headimg-data > h1 > a");
-			var padd1 = document.querySelectorAll("#headimg-data > h1");
-			console.log(padd);
-			console.log(padd1);
-			padd.style.paddingTop = "20px";
-			padd1.style.paddingTop = "20px";
 
-			//*[@id="headimg-data"]/h1
-			#headimg-data > h1
 
+
+
+// -------------------------------------
+
+
+
+
+
+// 			var padd = document.querySelectorAll("#headimg-data > h1");
+// 			console.log(padd[0]);
+// 			padd[0].style.paddingTop = "20px";
+
+// 			//*[@id="headimg-data"]/h1
+// 			#headimg-data > h1
+
+// /html/head/style[2]/text()
+// getComputedStyle(
+
+// var padd = document.getComputedStyle("#headimg-data > h1");
+// console.log(padd[0]);
+// padd[0].style.paddingTop = "20px";
+
+
+// <script>
+// function(funcForMyLovelyKarat){
+// var padd = document.querySelectorAll("#headimg-data > h1");
+// 	if (typeof padd !== "undefined"
+// 		&& typeof padd[0] !== "undefined"
+// 		&& typeof padd[0].style !== "undefined"){
+// 		padd[0].style.paddingTop = "20px";
+// 	}
+// }
+// </script>
+// <script>
+// funcForMyLovelyKarat();
+// </script>
